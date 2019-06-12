@@ -34,7 +34,12 @@ class LoginComponent extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.isLoggedIn) {
-            this.props.history.push('/private');
+            var locationState = this.props.location.state;
+            if (locationState) {
+                this.props.history.push(this.props.location.state.from.pathname);
+            } else {
+                this.props.history.push('/private');
+            }
         }
     }
 

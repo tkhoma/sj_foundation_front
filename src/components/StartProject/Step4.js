@@ -82,7 +82,8 @@ class Step4 extends Component {
             due,
             this.props.category,
             this.props.description,
-            this.props.imageUrl
+            this.props.imageUrl,
+            this.props.userUID
         ))
         this.props.history.push('/')
     }
@@ -171,7 +172,8 @@ const mapStateToProps = (state) => ({
     title: state.projects.newProject.title || '',
     category: state.projects.newProject.category || '',
     description: state.projects.newProject.description || '',
-    imageUrl: state.projects.newProject.projectImageUrl || ''
+    imageUrl: state.projects.newProject.projectImageUrl || '',
+    userUID: state.authentication.user.uid || -1
 })
 
 export default connect(mapStateToProps)(withHeader(Step4))

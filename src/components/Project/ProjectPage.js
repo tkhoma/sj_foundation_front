@@ -84,7 +84,7 @@ class ProjectPage extends Component {
           title={project.data.title}
           thumbUrl={project.data.thumbUrl}
           content={project.data.content}
-          supporters={project.projectStats.supporters}
+          supporters={project.data.projectStats.supporters}
         />
       </div>
     );

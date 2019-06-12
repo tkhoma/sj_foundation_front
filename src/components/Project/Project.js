@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Subscribe from 'components/Subscribe';
 import StatsWidget from './StatsWidget';
+import { NavLink } from 'react-router-dom'
 
 function Project(props) {
     return (
@@ -14,7 +15,10 @@ function Project(props) {
                         <div className="col-auto page-nav">Team</div>
                         <div className="col-auto page-nav">FAQ</div>
                         <div className="col text-right">
-                            <button className="btn btn-default btn-rounded">Donate</button>
+                            <NavLink
+                                className="btn btn-default btn-rounded"
+                                to={ location.pathname + "/donate" }
+                            >Donate</NavLink>
                         </div>
                     </div>
                     <div className="row">

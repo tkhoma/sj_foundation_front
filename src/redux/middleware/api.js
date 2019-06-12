@@ -37,7 +37,10 @@ function callApi(endpoint, store, method, body) {
                 userItem.token = userInfo;
                 sessionStorage.setItem('user', JSON.stringify(userItem));
             } else {
-                sessionStorage.removeItem('user');
+                if (sessionStorage.getItem('user')) {
+                    sessionStorage.removeItem('user');
+                    location.reload(true);
+                }
             }
             return response.json().then(json => ({ json, response }))
         })

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Menu from './Header/Menu';
 import { connect } from 'react-redux';
 import { headerActions } from 'actions/headerActions';
+import StartProjectButton from 'components/StartProject/StartProjectButton'
 
 class Present extends Component {
 
@@ -48,12 +49,7 @@ class Present extends Component {
                                 Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
                             </div>
                         </div>
-
-                        <div className="row align-items-center">
-                            <div className="col">
-                                <NavLink className='btn btn-prime' to="/start" exact>Start project</NavLink>
-                            </div>
-                        </div>
+                        <StartProjectButton />
                     </div>
                 </div>
             </div>

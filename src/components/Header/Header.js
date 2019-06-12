@@ -4,6 +4,7 @@ import Menu from './Menu';
 import { connect } from 'react-redux';
 import { headerActions } from 'actions/headerActions';
 import _ from 'lodash';
+import StartProjectButton from 'components/StartProject/StartProjectButton'
 
 const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
@@ -45,11 +46,7 @@ class Header extends Component {
                                   itemClassName="col-auto"/>
                         </div>
                         <div className="col-2 controls">
-                            <div className="row">
-                                <div className="col">
-                                    <NavLink className="btn btn-prime" to="/start">Start project</NavLink>
-                                </div>
-                            </div>
+                            <StartProjectButton />
                         </div>
                     </div>
                 </div>

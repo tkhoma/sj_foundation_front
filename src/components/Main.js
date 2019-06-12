@@ -13,6 +13,7 @@ import Step1 from 'components/StartProject/Step1'
 import Step2 from 'components/StartProject/Step2'
 import Step3 from 'components/StartProject/Step3'
 import Step4 from 'components/StartProject/Step4'
+import DonatePage from 'components/Project/DonatePage'
 
 class Main extends Component {
     constructor(props) {
@@ -43,11 +44,12 @@ class Main extends Component {
                     <Route path="/login" exact component={LoginComponent} />
                     <Route path="/private" exact component={withPrivateRoute(PrivatePage)} />
                     <Route path="/projects" exact component={ProjectsPage} />
+                    <Route path="/project/:projectId/donate" component={withPrivateRoute(DonatePage)} />
                     <Route path="/project/:projectId" component={ProjectPage} />
                     <Route path="/start" exact component={Step1} />
                     <Route path="/step2" exact component={Step2} />
                     <Route path="/step3" exact component={Step3} />
-                    <Route path="/step4" exact component={Step4} />
+                    <Route path="/step4" exact component={withPrivateRoute(Step4)} />
                 </Switch>
             </main>
         )
